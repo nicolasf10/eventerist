@@ -1,38 +1,118 @@
+:root {
+  --red: #EA1A27;
+  --orange: #F48B1B;
+  --yellow: #F8BE4A;
+  --gray: #373737;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'Mont-Bold';
+  src: local('Mont-Bold'), url(./fonts/Mont-Bold.ttf) format('ttf');
+}
+
 .App {
-  text-align: center;
+  background-color: #f4f4f4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.link-style {
+  text-decoration: none;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.link-style:hover {
+  color: #fff;
+}
+
+/* Carousel */
+.carousel-img {
+  object-fit:cover;
+  height: calc(100vh - 80px) !important;
+  /* width:350px; */
+}
+
+
+/* Rotating words effect */
+.wrapper *,
+.wrapper *:before,
+.wrapper *:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.wrapper{
+    box-sizing: content-box;
+    display: flex;
+    border-radius: 8px;
+    height: 90px;
+}
+
+.words{
+    overflow: hidden;
+    height: 90px;
+}
+
+.words span{
+    font-size: 3.5rem;
+    background: rgb(234,26,39);
+    background: -moz-linear-gradient(273deg, rgba(234,26,39,1) 0%, rgba(244,139,27,1) 100%);
+    background: -webkit-linear-gradient(273deg, rgba(234,26,39,1) 0%, rgba(244,139,27,1) 100%);
+    background: linear-gradient(273deg, rgba(234,26,39,1) 0%, rgba(244,139,27,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ea1a27",endColorstr="#f48b1b",GradientType=1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-sizing: content-box;
+    display: block;
+    animation: spin_words 9s infinite;
+    height: 90px;
+}
+
+@media (max-width: 1100px) {
+  .words span {
+    font-size: 2.8rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes spin_words{
+    10%{
+        transform: translateY(-112%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    35%{
+        transform: translateY(-212%);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+    60%{
+        transform: translateY(-312%);
+    }
+    75%{
+        transform: translateY(-300%);
+    }
+    85%{
+        transform: translateY(-412%);
+    }
+    100%{
+        transform: translateY(-400%);
+    }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Steps animation */
+@keyframes StepFade {
+  0%   {transform: translateY(100%);}
+  100%  {transform: translateY(0%);}
 }

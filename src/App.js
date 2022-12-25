@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Hero from './components/Hero';
+import Steps from './components/Steps';
+import Mockup from './components/Mockup';
+import Join from './components/Join';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar id="navbar"/>
+      <Hero id="hero"/>
+      <Steps id="steps"/>
+      <Mockup id="mockup"/>
+      <Join id="join"/>
     </div>
   );
 }
