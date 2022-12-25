@@ -9,6 +9,8 @@ const HeroSection = styled.div`
   margin: 0px;
   padding: 0px;
   height: calc(100vh - 80px);
+  box-sizing: border-box;
+  border-bottom: 40px solid var(--red);
 
   @media (screen-width: 991px) {
     height: auto;
@@ -34,7 +36,7 @@ function Hero() {
                 <Col style={{margin: '0px', padding: '0px'}} lg={6} md={6} sm={12}><SlideShow/></Col>
             </Row>
         </Container>
-        <Strip />
+        {/* <Strip /> */}
     </HeroSection>
   );
 }

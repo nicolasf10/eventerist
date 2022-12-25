@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import Alert from 'react-bootstrap/Alert';
 
 
 const SendContainer = styled.div`
@@ -36,6 +37,7 @@ const SubmitButton = styled.button`
     border-radius: 10px;
     padding: 0px 20px;
     font-weight: 500;
+    width: 200px;
     transition: background-color 0.3s ease;
 
     &:hover {
@@ -64,11 +66,20 @@ function SendEmail({ status, message, onValidated }) {
             EMAIL: email,
         });
         console.log("submit");
-
+        setShow(false);
     }
 
     useEffect(() => {
         if(status === "success") clearFields();
+        if (status === "success") {
+            status = "alert"
+        }
+
+        if (status === "alert") {
+            setShow(true);
+            status = "success"
+        }
+        console.log(status);
     }, [status])
 
     const clearFields = () => {
@@ -76,9 +87,16 @@ function SendEmail({ status, message, onValidated }) {
     }
 
     const [email, setEmail] = useState("");
+    const [show, setShow] = useState(false);
 
     return (
         <SendContainer>
+                {show ?
+                    <Alert className='alert-form' variant="success" onClose={() => setShow(false)} dismissible>
+                        <Alert.Heading className='alert-text'>Email registered!</Alert.Heading>
+                    </Alert> 
+                : <></>
+                }
             <Form onSubmit={(e) => handleSubmit(e)}>
                 <Input
                     onChange={handleChange}
@@ -88,7 +106,7 @@ function SendEmail({ status, message, onValidated }) {
                     label="email"
                     isRequired
                 />
-                <SubmitButton type="submit">Join the waitlist</SubmitButton>
+                <SubmitButton type="submit">{status === "sending" ? <i class="fa fa-spin fa-solid fa-spinner"></i> : <span>Join the waitlist</span>}</SubmitButton>
             </Form>
         </SendContainer>
     );

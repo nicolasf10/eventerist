@@ -8,28 +8,14 @@ import { motion } from "framer-motion";
 
 const StepsContainer = styled.div`
     min-height: 50vh;
-    padding-top: 30px;
+    padding: 50px 10px;
     color: var(--gray);
     display: flex;
     flex-direction: column;
-    padding-bottom: 40px;
-
-    & .step {
-        /* transform: translateY(100%);
-        animation-name: StepFade;
-        animation-duration: 0.6s;
-        transform: translateY(100%); */
-    }
-
-    & .step:nth-child(1) {
-        animation-delay: 2s;
-    }
+    justify-content: center;
 `
 
-const Item = styled.div``
-
 const Step = styled(motion.div)`
-    /* background-color: tomato; */
     text-align: center;
     border: 2px solid var(--red);
     padding: 10px;
@@ -65,14 +51,14 @@ const StepIcon = styled.i`
 `
 
 const Title = styled.h1`
-    font-family: "Mont-Bold", sans-serif;
+    font-family: "Mont-Bold", "Poppins", sans-serif;
     font-size: 3rem;
     text-align: center;
-    margin: 40px 0px;
+    margin: 0px 0px 30px 0px;
     justify-self: start;
 
     @media (max-width: 991px) {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 `
 
@@ -100,11 +86,11 @@ function Steps() {
 
     return (
         <StepsContainer>
-            <Title>It's as easy as 1, 2, 3</Title>
-            <Container style={{justifySelf: 'center'}}>
+            <Container>
+                <Title>It's as easy as 1, 2, 3</Title>
                 <Row>
                     {items.map((item) => 
-                            <Col lg={4} >
+                            <Col md={12} lg={4} >
                                 <Step initial={{ opacity: 0, y: 80 }} whileInView={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 100, duration: 1.5, delay: parseInt(item.key)/10 }} className='step'>
                                     <StepIcon className={item.icon}></StepIcon>
                                     <StepTitle><StepKey>{item.key}. </StepKey>{item.title}</StepTitle>

@@ -1,13 +1,12 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion, useScroll } from "framer-motion"
-import ComputerImg from './../images/computer.png';
-import PhoneImg from './../images/phone.png';
+import PhoneImg from './../images/phone1.png';
+// import ComputerImg from './../images/computer.png';
 
 
 const MockupContainer = styled.div`
     min-height: 100vh;
-    /* background: linear-gradient(273deg, rgba(234,26,39,1) 0%, rgba(244,139,27,1) 100%); */
     background-color: var(--red);
     text-align: center;
     display: flex;
@@ -24,11 +23,11 @@ const Computer = styled(motion.img)`
 
 const Phone = styled(motion.img)`
     margin: auto;
-    display: none;
+    /* display: none; */
     
-    @media (max-width: 991px) {
+    /* @media (max-width: 991px) {
         display: inline;
-    }
+    } */
 `
 
 
@@ -43,7 +42,7 @@ function Mockup() {
     
     return (
         <MockupContainer ref={ref}>
-            <Computer style={{ scale: scrollYProgress, maxWidth: '90vw', maxHeight: '90vh' }} src={ComputerImg} alt="computer screen"/>
+            {/* <Computer style={{ scale: scrollYProgress, maxWidth: '90vw', maxHeight: '90vh' }} src={ComputerImg} alt="computer screen"/> */}
             <Phone style={{ scale: scrollYProgress, maxWidth: '90vw', maxHeight: '90vh' }} src={PhoneImg} alt="phone screen"/>
         </MockupContainer>
     );

@@ -16,7 +16,7 @@ const JoinContainer = styled.div`
 `
 
 const Title = styled.h1`
-    font-family: "Mont-Bold", sans-serif;
+    font-family: "Mont-Bold", "Poppins", sans-serif;
     font-size: 3rem;
     text-align: center;
     justify-self: start;

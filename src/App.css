@@ -15,7 +15,7 @@ body {
 
 @font-face {
   font-family: 'Mont-Bold';
-  src: local('Mont-Bold'), url(./fonts/Mont-Bold.ttf) format('ttf');
+  src: local('Mont-Bold'), url(./fonts/Mont-HeavyDEMO.otf) format('otf');
 }
 
 .App {
@@ -35,6 +35,7 @@ body {
 .carousel-img {
   object-fit:cover;
   height: calc(100vh - 80px) !important;
+  border-bottom: 40px solid var(--red);
   /* width:350px; */
 }
 
@@ -83,6 +84,25 @@ body {
     font-size: 2.8rem;
   }
 }
+
+/* Alert for sending email */
+.alert-form {
+  position: fixed !important;
+  top: 20px;
+  left: 5vw;
+  z-index: 1;
+  width: calc(100vw - 10vw);
+}
+
+.alert-form .alert-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em !important;
+  font-weight: 400;
+  margin: 0px;
+}
+
+
+/* Animations */
 
 @keyframes spin_words{
     10%{

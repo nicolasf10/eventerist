@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../images/logo.svg'
+import logo from '../images/logo.png';
 
 
 const Nav = styled.nav`
@@ -13,6 +13,11 @@ const Nav = styled.nav`
 const Logo = styled.img`
     height: 70px;
     margin-left: 40px;
+
+    @media (max-width: 991px) {
+      height: 60px;
+      margin-left: 20px;
+    }
 `
 
 const AddButton = styled.button`

@@ -5,7 +5,7 @@ import MailchimpForm from './SendEmail';
 const TextContainer = styled.div`
     margin: 0px;
     padding: 0px;
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px - 40px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,10 +15,10 @@ const TextContainer = styled.div`
 `
 
 const Heading = styled.h1`
-    font-size: 3.5rem;
+    font-size: 3.5em;
     
     @media (max-width: 1100px) {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 `
 
@@ -29,7 +29,7 @@ const Emojis = styled.h1`
 
 const Caption = styled.p`
     color: #000;
-    font-size: 1.4rem;
+    font-size: 1.4em;
     font-family: "Poppins", sans-serif;
 
 `
