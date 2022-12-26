@@ -15,7 +15,7 @@ body {
 
 @font-face {
   font-family: 'Mont-Bold';
-  src: local('Mont-Bold'), url(./fonts/Mont-HeavyDEMO.otf) format('otf');
+  src: local('Mont-Bold'), url(%PUBLIC_URL%/fonts/Mont-Bold.ttf) format('ttf');
 }
 
 .App {
