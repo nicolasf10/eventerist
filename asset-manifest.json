@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.1ff36db9.css",
+    "main.css": "/static/css/main.7cb1a73e.css",
     "main.js": "/static/js/main.e4f9ce14.js",
     "static/media/img3.jpeg": "/static/media/img3.a5356831ab40ddd41e7c.jpeg",
     "static/media/phone1.png": "/static/media/phone1.16e04c6e5266af4e3d87.png",
     "static/media/img1.jpeg": "/static/media/img1.01ba6c864830151ea375.jpeg",
     "static/media/img2.jpeg": "/static/media/img2.1796fdc6277a83fd844c.jpeg",
     "static/media/emojibackground.png": "/static/media/emojibackground.1786a5263d84da285f89.png",
-    "static/media/Mont-HeavyDEMO.otf": "/static/media/Mont-HeavyDEMO.a1c041a8d8e27fc771db.otf",
+    "static/media/Mont-Bold.ttf": "/static/media/Mont-Bold.55f2f911d04f1bbf1328.ttf",
     "static/media/logo.png": "/static/media/logo.d6e85c07eeb4bbec3633.png",
     "index.html": "/index.html",
-    "main.1ff36db9.css.map": "/static/css/main.1ff36db9.css.map",
+    "main.7cb1a73e.css.map": "/static/css/main.7cb1a73e.css.map",
     "main.e4f9ce14.js.map": "/static/js/main.e4f9ce14.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ff36db9.css",
+    "static/css/main.7cb1a73e.css",
     "static/js/main.e4f9ce14.js"
   ]
 }
